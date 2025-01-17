@@ -23,17 +23,16 @@ The goal is to extract rules that highlight strong associations between variable
 1. **Support**  
    Support measures the frequency of a particular item or itemset in the dataset. It helps identify how often an itemset appears.
 
-Support= 
-Total number of transactions / Number of transactions containing the itemset
+**Support** = **Total number of transactions** / **Number of transactions containing the itemset**
 
 2. **Confidence**  
    Confidence indicates the likelihood of the consequent occurring when the antecedent is present.
 
-  Confidence = Number of transactions containing the antecedent / Number of transactions containing both antecedent and consequent
+  **Confidence** = **Number of transactions containing the antecedent** / **Number of transactions containing both antecedent and consequent**
 3. **Lift**  
    Lift evaluates the strength of a rule compared to random chance. A lift value greater than 1 indicates a strong association.
 
-   Lift = Confidence / Expected confidence
+   **Lift** = **Confidence** / **Expected confidence**
 
 ---
 
@@ -89,7 +88,7 @@ Let’s illustrate association rule mining with a practical example.
 - Total transactions: 5  
 - Transactions containing Bread, Butter, and Milk: 3 (T1, T3, T5)
 
-Support = Transactions containing Bread, Butter, and Milk / Total transactions
+**Support** = **Transactions containing Bread, Butter, and Milk** / **Total transactions**
 = 3 / 5 
 = 0.6
 
@@ -102,7 +101,7 @@ Support = Transactions containing Bread, Butter, and Milk / Total transactions
 - Transactions containing Bread and Butter: 4 (T1, T2, T3, T5)  
 - Transactions containing Bread, Butter, and Milk: 3
 
-Confidence = Transactions containing Bread, Butter, and Milk / Transactions containing Bread and Butter 
+**Confidence** = **Transactions containing Bread, Butter, and Milk** / **Transactions containing Bread and Butter** 
 = 3/4 
 = 0.75
 
@@ -114,13 +113,13 @@ Confidence = Transactions containing Bread, Butter, and Milk / Transactions cont
 
 **Support for Milk:**
 
-Support(Milk) = Transactions containing Milk / Total transactions 
+**Support(Milk)** = **Transactions containing Milk** / **Total transactions** 
 = 4/5 
 = 0.8
 
 **Lift for the rule:**
 
-Lift = Confidence / Support(Milk) 
+**Lift** = **Confidence** / **Support(Milk)** 
 = 0.75 / 0.8 
 = 0.9375
 
