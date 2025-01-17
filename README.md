@@ -24,18 +24,16 @@ The goal is to extract rules that highlight strong associations between variable
    Support measures the frequency of a particular item or itemset in the dataset. It helps identify how often an itemset appears.
 
 Support= 
-Total number of transactions
-Number of transactions containing the itemset
+Total number of transactions / Number of transactions containing the itemset
 
 2. **Confidence**  
    Confidence indicates the likelihood of the consequent occurring when the antecedent is present.
 
-   \[\text{Confidence} = \frac{\text{Transactions with both antecedent and consequent}}{\text{Transactions with antecedent}}\]
-
+  Confidence = Number of transactions containing the antecedent / Number of transactions containing both antecedent and consequent
 3. **Lift**  
    Lift evaluates the strength of a rule compared to random chance. A lift value greater than 1 indicates a strong association.
 
-   \[\text{Lift} = \frac{\text{Confidence}}{\text{Expected confidence}}\]
+   Lift = Confidence / Expected confidence
 
 ---
 
@@ -91,7 +89,9 @@ Let’s illustrate association rule mining with a practical example.
 - Total transactions: 5  
 - Transactions containing Bread, Butter, and Milk: 3 (T1, T3, T5)
 
-\[\text{Support} = \frac{\text{Transactions containing Bread, Butter, and Milk}}{\text{Total transactions}} = \frac{3}{5} = 0.6\]
+Support = Transactions containing Bread, Butter, and Milk / Total transactions
+= 3 / 5 
+= 0.6
 
 **Support:** 60%.
 
@@ -102,7 +102,9 @@ Let’s illustrate association rule mining with a practical example.
 - Transactions containing Bread and Butter: 4 (T1, T2, T3, T5)  
 - Transactions containing Bread, Butter, and Milk: 3
 
-\[\text{Confidence} = \frac{\text{Transactions containing Bread, Butter, and Milk}}{\text{Transactions containing Bread and Butter}} = \frac{3}{4} = 0.75\]
+Confidence = Transactions containing Bread, Butter, and Milk / Transactions containing Bread and Butter 
+= 3/4 
+= 0.75
 
 **Confidence:** 75%.
 
@@ -112,11 +114,15 @@ Let’s illustrate association rule mining with a practical example.
 
 **Support for Milk:**
 
-\[\text{Support(Milk)} = \frac{\text{Transactions containing Milk}}{\text{Total transactions}} = \frac{4}{5} = 0.8\]
+Support(Milk) = Transactions containing Milk / Total transactions 
+= 4/5 
+= 0.8
 
 **Lift for the rule:**
 
-\[\text{Lift} = \frac{\text{Confidence}}{\text{Support(Milk)}} = \frac{0.75}{0.8} = 0.9375\]
+Lift = Confidence / Support(Milk) 
+= 0.75 / 0.8 
+= 0.9375
 
 **Lift:** 0.9375 (slightly less than 1, indicating a weak association).
 
