@@ -23,7 +23,9 @@ The goal is to extract rules that highlight strong associations between variable
 1. **Support**  
    Support measures the frequency of a particular item or itemset in the dataset. It helps identify how often an itemset appears.
 
-   \[\text{Support} = \frac{\text{Transactions containing itemset}}{\text{Total transactions}}\]
+Support= 
+Total number of transactions
+Number of transactions containing the itemset
 
 2. **Confidence**  
    Confidence indicates the likelihood of the consequent occurring when the antecedent is present.
